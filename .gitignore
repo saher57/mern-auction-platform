@@ -1,0 +1,36 @@
+# IDE and Editor Files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Build Artifacts
+dist/
+build/
+client/build/  # React build output
+
+# Environment Variables
+.env           # Ignore any .env in the main folder
+client/.env    # Ignore client/.env (Stripe key)
+server/.env    # Ignore server/.env (MongoDB URI, etc.)
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node.js
+node_modules/

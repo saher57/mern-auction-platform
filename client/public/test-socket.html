@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.IO Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4.8.1/dist/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>Socket.IO Test</h1>
+  <script>
+    const socket = io('http://localhost:5000', {
+      transports: ['polling'], // Force polling instead of WebSocket
+      withCredentials: true
+    });
+
+    socket.on('connect', () => {
+      console.log('Socket.IO connected');
+    });
+
+    socket.on('connect_error', (err) => {
+      console.error('Socket.IO connection error:', err.message);
+    });
+
+    socket.on('disconnect', () => {
+      console.log('Socket.IO disconnected');
+    });
+  </script>
+</body>
+</html>
